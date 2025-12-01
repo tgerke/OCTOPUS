@@ -98,7 +98,7 @@ FitMCPMod<-function(dose,resp,data,models,mod.sel, bPlacMinusTrt, dLowerCI, dUpp
 
     maxT<-max(mod.fit$MCTtest$tStat)
 
-    if (class(mod.fit)!='list') {  # if all candidate models converge
+    if (!inherits(mod.fit, "list")) {  # if all candidate models converge
         if (mod.sel==1) {
             pred.disc<-predict(mod.fit,doseSeq=dose,predType='effect-curve',se.fit=T)[[mod.fit$selMod]]
             pred.disc.value<-pred.disc[['fit']]
