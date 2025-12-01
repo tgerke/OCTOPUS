@@ -51,6 +51,7 @@ SimulateAllPatientCovariates.default <- function( cSimCovariates,  cTrialDesign 
     return( dfCovRet )
 }
 
+#' @export
 SimulateAllPatientCovariates.NULL <- function( cSimCovariates,  cTrialDesign   )
 {
 

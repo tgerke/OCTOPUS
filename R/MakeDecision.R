@@ -88,7 +88,7 @@ MakeDecision.General <- function( lDecision, lResAnalysis, bFinalAnalysis, cRand
 
 }
 
-
+#' @export
 MakeDecision.GeneralDoses <- function( lDecision, lResAnalysis, bFinalAnalysis, cRandomizer )
 {
 
