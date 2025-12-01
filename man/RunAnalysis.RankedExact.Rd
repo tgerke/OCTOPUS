@@ -16,6 +16,10 @@
 {This is the method used for running the Ranked analysis using wilcox_test from the coin package.
 Specifically, wilcox_test (DO NO CONFUSE with wilcox.test) with exact = TRUE"  }
 }
+\note{
+confint() is intentionally not imported from stats to preserve S4 method
+  dispatch from the coin package for IndependenceTest objects.
+}
 \seealso{
 { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/RunAnalysis.RankedExact.R}{View Code on GitHub} }
 }

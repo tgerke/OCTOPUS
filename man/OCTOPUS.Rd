@@ -2,7 +2,6 @@
 % Please edit documentation in R/OCTOPUS.R
 \docType{package}
 \name{OCTOPUS}
-\alias{OCTOPUS-package}
 \alias{OCTOPUS}
 \title{OCTOPUS}
 \description{
