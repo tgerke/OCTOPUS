@@ -40,6 +40,7 @@ test_that("RunSimulation - Outputfiles",
         Sys.setenv( SGE_TASK_ID = 1)
 
         gDebug       <<- FALSE
+        gPrintEnrollment <<- TRUE
 
         set.seed(123)
         lRet = RunSimulation( cSimulation )

@@ -68,10 +68,12 @@ MakeDecisionBasedOnPostProbMAVCommon <- function(  cAnalysis, lCalcs)
 
     nGo <- nNoGo <- nPause <- 0
 
+    # Use a small tolerance for floating point comparison
+    dTolerance <- 1e-10
 
     if( dPrGrtMAV > dPUpperCutoff )
         nGo <- 1
-    else if( dPrGrtMAV < dPLowerCutoff   )
+    else if( dPrGrtMAV < (dPLowerCutoff - dTolerance)   )
         nNoGo <- 1
     else
         nPause <- 1
