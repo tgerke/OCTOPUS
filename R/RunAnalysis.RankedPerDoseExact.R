@@ -9,6 +9,8 @@
 
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/RunAnalysis.RankedPerDoseExact.R}{View Code on GitHub} }
 #' @export
+#' @note confint() is intentionally not imported from stats to preserve S4 method
+#'   dispatch from the coin package for IndependenceTest objects.
 RunAnalysis.RankedPerDoseExact <- function( cAnalysis, lDataAna,  nISAAnalysisIndx, bIsFinalISAAnalysis, cRandomizer  )
 {
     #print( "RunAnalysis.RankedPerDoseExact XX")

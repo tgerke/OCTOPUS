@@ -388,10 +388,10 @@ SimulateSingleTrial.default <- function( cScen, cTrialDesign  )
         {
             if(  cScen$nGridIndex == 1 && cScen$nTrialID == 1 ){
                 strFileName <- paste( "enrollment/1enroll", cScen$nGridIndex, ".csv", sep="" )
-                write.table( mEnrollment, strFileName, sep=", ", append=FALSE, col.name=TRUE, row.names = FALSE, quote=FALSE )
+                write.table( mEnrollment, strFileName, sep=", ", append=FALSE, col.names=TRUE, row.names = FALSE, quote=FALSE )
             }
             else{
-                write.table( mEnrollment, strFileName, sep=", ", append=TRUE, col.name=FALSE, row.names=FALSE)
+                write.table( mEnrollment, strFileName, sep=", ", append=TRUE, col.names=FALSE, row.names=FALSE)
             }
         }
     }

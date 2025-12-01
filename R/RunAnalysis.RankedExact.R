@@ -13,6 +13,8 @@
 #' Specifically, wilcox_test (DO NO CONFUSE with wilcox.test) with exact = TRUE"  }
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/RunAnalysis.RankedExact.R}{View Code on GitHub} }
 #' @export
+#' @note confint() is intentionally not imported from stats to preserve S4 method
+#'   dispatch from the coin package for IndependenceTest objects.
 RunAnalysis.RankedExact <- function( cAnalysis, lDataAna,   nISAAnalysisIndx, bIsFinalISAAnalysis, cRandomizer )
 {
 

@@ -97,9 +97,9 @@ RunSimulation.default <- function( lSimulation )
 
     colnames( mResAll)[c(1)]<-c( "Design")
     if( nGridIndex == 1){
-        write.table( mResAll, strOutFile, sep=", ", append=FALSE, col.name=TRUE, row.names = FALSE, quote=FALSE )
+        write.table( mResAll, strOutFile, sep=", ", append=FALSE, col.names=TRUE, row.names = FALSE, quote=FALSE )
     }else{
-        write.table( mResAll, strOutFile, sep=", ", append=FALSE, col.name=FALSE, row.names=FALSE)
+        write.table( mResAll, strOutFile, sep=", ", append=FALSE, col.names=FALSE, row.names=FALSE)
     }
 
     nQtyISA <- length( lISAAna )
@@ -109,13 +109,13 @@ RunSimulation.default <- function( lSimulation )
         if( nGridIndex == 1 )
         {
             strFileName <- paste( "ISAOut", iISA, "/1isaout", nGridIndex, ".csv", sep="" )
-            write.table( lISAAnaRes[[ iISA ]], strFileName, sep=", ", append=FALSE, col.name=TRUE, row.names = FALSE, quote=FALSE )
+            write.table( lISAAnaRes[[ iISA ]], strFileName, sep=", ", append=FALSE, col.names=TRUE, row.names = FALSE, quote=FALSE )
 
         }
         else
         {
             strFileName <- paste( "ISAOut", iISA, "/isaout", nGridIndex, ".csv", sep="" )
-            write.table( lISAAnaRes[[ iISA ]], strFileName, sep=", ", append=TRUE, col.name=FALSE, row.names=FALSE)
+            write.table( lISAAnaRes[[ iISA ]], strFileName, sep=", ", append=TRUE, col.names=FALSE, row.names=FALSE)
         }
 
     }
