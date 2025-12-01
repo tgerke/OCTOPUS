@@ -22,7 +22,9 @@ Suggests: testthat,
           covr,
           kableExtra,
           rjags,
-          ggplot2
+          ggplot2,
+          future (>= 1.20.0),
+          future.apply (>= 1.9.0)
 VignetteBuilder: knitr
 URL: https://github.com/kwathen/OCTOPUS
 License: GPL-3 + file LICENSE
