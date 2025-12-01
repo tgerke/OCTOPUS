@@ -220,6 +220,8 @@ setMethod(  f="Validate",
 # SimulateArrivalTimes #####
 #' @name SimulateArrivalTimes
 #' @title SimulateArrivalTimes
+#' @aliases SimulateArrivalTimes,AccrualMethods-method
+#' @param cAP An AccrualMethods object created by \code{\link{NewAccrualProcess}}
 #' @description {This class can be used to simulate the arrival times of patients in a simulated clinical trial.  The function
 #' NewAccrualProcess returns an object used to simulate arrival times for patients by calling SimulateArrivalTime.
 #' The class assumes
@@ -339,7 +341,9 @@ setMethod(  f = "SimulateArrivalTimes",
 #  SimulateAdditionalArrivalTimes #####
 #' @name SimulateAdditionalArrivalTimes
 #' @title SimulateAdditionalArrivalTimes
-#' @description {
+#' @aliases SimulateAdditionalArrivalTimes,AccrualMethods-method
+#' @param cAP An AccrualMethods object created by \code{\link{NewAccrualProcess}}
+#' @description {Simulate additional patient arrival times beyond those already simulated.
 #' }
 #' @seealso \code{\link{NewAccrualProcess}} for creating the object.
 #' @param nQtyPats  Number of additonal times to simulate

@@ -35,6 +35,7 @@ RandomizeBetweenISA.default <- function( cRandomizer, vISAStatus, dCurrentTime )
 #' @name RandomizeBetweenISA.EqualRandomizer
 #' @title RandomizeBetweenISA.EqualRandomizer
 #' @description {For all ISAs with vISAStus = 1, select an ISA index with equal probability.  }
+#' @export
 RandomizeBetweenISA.EqualRandomizer <- function( cRandomizer, vISAStatus, dCurrentTime )
 {
     nQtyISA   <- length( cRandomizer )      # This is the number of ISAs

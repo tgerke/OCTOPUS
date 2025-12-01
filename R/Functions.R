@@ -11,6 +11,13 @@
 
 #' @name AddPatient
 #' @title AddPatient
+#' @param lPatOut List of patient outcomes
+#' @param dCurrentTime Current simulation time
+#' @param nISA ISA number
+#' @param nTrt Treatment number
+#' @param dfCov Data frame of covariates
+#' @param cEnrolledPats Enrolled patients data structure
+#' @param nPrintDetail Print detail level (default 0)
 #' @description {This function uses the lPatOut as a database of patients, it pulls 1 patient out and adds it to lEnrolledPats}
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/Functions.R}{View Code on GitHub} }
 #' @export
@@ -189,8 +196,6 @@ SelectList <- function( lData, lValue )
 #' @title CheckGlobalVariables
 #' @description {Determine if the global variables that are needed have been defined and if not define them. Use of global variables
 #' should be restricted to the variables that are used throughout the code and only in VERY limited use.}
-#' @param lData - The dataset (as a list) that you want to select from
-#' @param lValue - A list with the desired values for each column in lData
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/Functions.R}{View Code on GitHub} }
 #' @export
 CheckGlobalVariables <- function()

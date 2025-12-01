@@ -6,11 +6,6 @@
 \usage{
 CheckGlobalVariables()
 }
-\arguments{
-\item{lData}{- The dataset (as a list) that you want to select from}
-
-\item{lValue}{- A list with the desired values for each column in lData}
-}
 \description{
 {Determine if the global variables that are needed have been defined and if not define them. Use of global variables
 should be restricted to the variables that are used throughout the code and only in VERY limited use.}

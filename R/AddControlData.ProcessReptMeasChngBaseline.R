@@ -9,6 +9,9 @@
 
 #' @name AddControlData.ProcessReptMeasChngBaseline
 #' @title AddControlData.ProcessReptMeasChngBaseline
+#' @param cISAData ISA data object
+#' @param cSourceData Source data object containing control data
+#' @param nISA ISA number
 #' @description{ Control data when processed as a Repeated measure change from outcome.}
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/AddControlData.ProcessReptMeasChngBaseline.R}{View Code on GitHub} }
 #' @export

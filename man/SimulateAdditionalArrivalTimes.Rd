@@ -2,17 +2,20 @@
 % Please edit documentation in R/AccrualMethods.R
 \name{SimulateAdditionalArrivalTimes}
 \alias{SimulateAdditionalArrivalTimes}
+\alias{SimulateAdditionalArrivalTimes,AccrualMethods-method}
 \title{SimulateAdditionalArrivalTimes}
 \usage{
 \S4method{SimulateAdditionalArrivalTimes}{AccrualMethods}(cAP, nQtyPats, vCurrentStartTimes)
 }
 \arguments{
+\item{cAP}{An AccrualMethods object created by \code{\link{NewAccrualProcess}}}
+
 \item{nQtyPats}{Number of additonal times to simulate}
 
 \item{vCurrentStartTimes}{a vector of the current start times.   The new times will be after the last element and the vector appended to.}
 }
 \description{
-{
+{Simulate additional patient arrival times beyond those already simulated.
 }
 }
 \details{

@@ -20,6 +20,7 @@ Suggests: testthat,
           knitr,
           rmarkdown,
           covr,
+          kableExtra
 VignetteBuilder: knitr
 URL: https://github.com/kwathen/OCTOPUS
 License: GPL-3 + file LICENSE

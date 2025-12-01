@@ -6,6 +6,13 @@
 \usage{
 CheckISAEnrollmentStatus(cRandomizer, vISAStatus, dfCov)
 }
+\arguments{
+\item{cRandomizer}{Randomizer object}
+
+\item{vISAStatus}{Vector of ISA status values}
+
+\item{dfCov}{Data frame of patient covariates}
+}
 \description{
 CheckISAEnrollmentStatus{ }
 }

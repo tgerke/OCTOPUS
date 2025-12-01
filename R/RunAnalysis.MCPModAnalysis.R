@@ -45,7 +45,7 @@ RunAnalysis.MCPModAnalysis <- function( cAnalysis, lDataAna,  nISAAnalysisIndx, 
         lDoseDec[[i]] <- MakeDecisionBasedOnCI(mcpFit$lCIDiff$vPredDiffPlacCILow[ i ], mcpFit$lCIDiff$vPredDiffPlacCIUpper[ i ], cAnalysis)
 
     #print( mcpFit$fitModel )
-    lRet <- MakeDecisionMCPMod( lDoseDec )
+    lRet <- MakeDecisionDoses( lDoseDec )
     #print( paste("Data for MCPMod"))
     #print( vPatOut )
     #print( vPatDose)

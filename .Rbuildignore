@@ -8,3 +8,19 @@
 pkgdown/
 
 ^.*\.Rproj$
+^DownloadImg\.jpg$
+^ExampleS3Class\.R$
+^HelpfulLinks\.txt$
+^Index\.Rmd$
+^LICENSE\.md$
+^LibraryProgrammingGuidelines\.txt$
+^MiscFiles$
+^OCTOPUS\.png$
+^PR_CHANGES\.md$
+^PR_TEMPLATE\.md$
+^SUBMIT_PR\.md$
+^VersionLog\.R$
+^_pkgdown\.yml$
+^docs$
+^enrollment$
+^logo\.png$

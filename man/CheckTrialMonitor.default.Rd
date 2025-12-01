@@ -13,6 +13,19 @@
   vPreviousIATime
 )
 }
+\arguments{
+\item{cISADesigns}{ISA designs object}
+
+\item{lEnrolledPats}{List of enrolled patients}
+
+\item{vISAStatus}{Vector of ISA status values}
+
+\item{dCurrentTime}{Current simulation time}
+
+\item{vISAAnalysisIndx}{Vector of ISA analysis indices}
+
+\item{vPreviousIATime}{Vector of previous interim analysis times}
+}
 \value{
 {Return: list( vRunISAAnalysis, vPreviousIATime )
               vRunISAAnalysis = 1 if the ISA needs to have the IA run and 0 otherwise

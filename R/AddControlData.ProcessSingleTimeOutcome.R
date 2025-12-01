@@ -9,6 +9,9 @@
 
 #' @name AddControlData.ProcessSingleTimeOutcome
 #' @title AddControlData.ProcessSingleTimeOutcome
+#' @param cISAData ISA data object
+#' @param cSourceData Source data object containing control data
+#' @param nISA ISA number
 #' @description{ Control data when processed as a single time point.}
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/AddControlData.ProcessSingleTimeOutcome.R}{View Code on GitHub} }
 #' @export

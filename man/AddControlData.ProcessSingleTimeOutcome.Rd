@@ -6,6 +6,13 @@
 \usage{
 \method{AddControlData}{ProcessSingleTimeOutcome}(cISAData, cSourceData, nISA)
 }
+\arguments{
+\item{cISAData}{ISA data object}
+
+\item{cSourceData}{Source data object containing control data}
+
+\item{nISA}{ISA number}
+}
 \description{
 { Control data when processed as a single time point.}
 }

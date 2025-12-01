@@ -8,6 +8,9 @@
 #############################################################################################################################.
 #' @name CheckISAEnrollmentStatus
 #' @title  CheckISAEnrollmentStatus
+#' @param cRandomizer Randomizer object
+#' @param vISAStatus Vector of ISA status values
+#' @param dfCov Data frame of patient covariates
 #' @description CheckISAEnrollmentStatus{ }
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/CheckISAEnrollmentStatus.R}{View Code on GitHub} }
 #' @export
@@ -18,6 +21,9 @@ CheckISAEnrollmentStatus <- function( cRandomizer, vISAStatus, dfCov    )
 
 #' @name CheckISAEnrollmentStatus.default
 #' @title CheckISAEnrollmentStatus.default
+#' @param cRandomizer Randomizer object
+#' @param vISAStatus Vector of ISA status values
+#' @param dfCov Data frame of patient covariates
 #' @description CheckISAEnrollmentStatus.default { This function will check the cRandomzier to make sure if an ISA is open for the covariate group dfCov
 #' Two cases
 #'  If No covaraite - dfCov = NULL then  vEnrollmentStatus = vISAStatus

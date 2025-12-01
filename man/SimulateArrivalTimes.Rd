@@ -2,11 +2,14 @@
 % Please edit documentation in R/AccrualMethods.R
 \name{SimulateArrivalTimes}
 \alias{SimulateArrivalTimes}
+\alias{SimulateArrivalTimes,AccrualMethods-method}
 \title{SimulateArrivalTimes}
 \usage{
 \S4method{SimulateArrivalTimes}{AccrualMethods}(cAP)
 }
 \arguments{
+\item{cAP}{An AccrualMethods object created by \code{\link{NewAccrualProcess}}}
+
 \item{vQtyPatsPerMonth}{A vector (possibly of length 1 for constant rate) for the number of patient accrued each month}
 
 \item{nMaxQtyPatients}{The maximum of of patient recruitment times to simulate.}

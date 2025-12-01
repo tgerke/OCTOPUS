@@ -14,6 +14,21 @@ AddPatient(
   nPrintDetail = 0
 )
 }
+\arguments{
+\item{lPatOut}{List of patient outcomes}
+
+\item{dCurrentTime}{Current simulation time}
+
+\item{nISA}{ISA number}
+
+\item{nTrt}{Treatment number}
+
+\item{dfCov}{Data frame of covariates}
+
+\item{cEnrolledPats}{Enrolled patients data structure}
+
+\item{nPrintDetail}{Print detail level (default 0)}
+}
 \description{
 {This function uses the lPatOut as a database of patients, it pulls 1 patient out and adds it to lEnrolledPats}
 }

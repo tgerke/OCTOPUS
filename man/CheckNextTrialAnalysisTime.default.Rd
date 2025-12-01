@@ -13,6 +13,19 @@
   vPreviousIATime
 )
 }
+\arguments{
+\item{cISADesigns}{ISA designs object}
+
+\item{lEnrolledPats}{List of enrolled patients}
+
+\item{vISAStatus}{Vector of ISA status values}
+
+\item{dCurrentTime}{Current simulation time}
+
+\item{vISAAnalysisIndx}{Vector of ISA analysis indices}
+
+\item{vPreviousIATime}{Vector of previous interim analysis times}
+}
 \description{
 {This function will Check the monitoring rule and return the time of next Analysis for the trial}
 }

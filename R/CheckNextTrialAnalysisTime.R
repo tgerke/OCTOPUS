@@ -9,6 +9,12 @@
 
 #' @name CheckNextTrialAnalysisTime
 #' @title CheckNextTrialAnalysisTime
+#' @param cISADesigns ISA designs object
+#' @param lEnrolledPats List of enrolled patients
+#' @param vISAStatus Vector of ISA status values
+#' @param dCurrentTime Current simulation time
+#' @param vISAAnalysisIndx Vector of ISA analysis indices
+#' @param vPreviousIATime Vector of previous interim analysis times
 #' @description {This function will Check the monitoring rule and return the time of next Analysis for the trial}
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/CheckNextTrialAnalysisTime.R}{View Code on GitHub} }
 #' @export
@@ -21,6 +27,12 @@ CheckNextTrialAnalysisTime<- function(  cISADesigns, lEnrolledPats,  vISAStatus,
 
 #' @name CheckNextTrialAnalysisTime.default
 #' @title CheckNextTrialAnalysisTime.default
+#' @param cISADesigns ISA designs object
+#' @param lEnrolledPats List of enrolled patients
+#' @param vISAStatus Vector of ISA status values
+#' @param dCurrentTime Current simulation time
+#' @param vISAAnalysisIndx Vector of ISA analysis indices
+#' @param vPreviousIATime Vector of previous interim analysis times
 #' @description {This function will Check the monitoring rule and return the time of next Analysis for the trial}
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/CheckNextTrialAnalysisTime.R}{View Code on GitHub} }
 #' @export

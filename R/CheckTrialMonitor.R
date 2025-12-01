@@ -65,6 +65,12 @@
 #'      vMinFUTime      <- c( 3,   3)
 #'
 #' }
+#' @param cISADesigns ISA designs object
+#' @param lEnrolledPats List of enrolled patients
+#' @param vISAStatus Vector of ISA status values
+#' @param dCurrentTime Current simulation time
+#' @param vISAAnalysisIndx Vector of ISA analysis indices
+#' @param vPreviousIATime Vector of previous interim analysis times
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/CheckTrialMonitor.R}{View Code on GitHub} }
 #' @export
 CheckTrialMonitor <- function(  cISADesigns, lEnrolledPats,  vISAStatus, dCurrentTime, vISAAnalysisIndx, vPreviousIATime )
@@ -130,6 +136,12 @@ CheckTrialMonitor <- function(  cISADesigns, lEnrolledPats,  vISAStatus, dCurren
 #'      vMinFUTime      <- c( 3,   3)
 #'
 #' }
+#' @param cISADesigns ISA designs object
+#' @param lEnrolledPats List of enrolled patients
+#' @param vISAStatus Vector of ISA status values
+#' @param dCurrentTime Current simulation time
+#' @param vISAAnalysisIndx Vector of ISA analysis indices
+#' @param vPreviousIATime Vector of previous interim analysis times
 #' @seealso { \href{https://github.com/kwathen/OCTOPUS/blob/master/R/CheckTrialMonitor.R}{View Code on GitHub} }
 #' @export
 CheckTrialMonitor.default <- function(  cISADesigns, lEnrolledPats,  vISAStatus, dCurrentTime, vISAAnalysisIndx, vPreviousIATime  )
