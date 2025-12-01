@@ -74,16 +74,20 @@ RunAnalysis.BayesianNormal <- function( cAnalysis, lDataAna,  nISAAnalysisIndx, 
 #the framework would be there to add a more complex placebo model
 SamplePosterior<- function( lData, nQtySamplesPerChain  )
 {
+    if (!requireNamespace("rjags", quietly = TRUE)) {
+        stop("Package 'rjags' is required for Bayesian analysis. Please install it with: install.packages('rjags')")
+    }
+    
     strModelFile <- paste0( path.package( "OCTOPUS"), "/BayesianModelFiles/NormalModel.txt")
     lDataJAGS <- list( vY = lData$vY, nQtyPats = lData$nQtyPats  )
 
     lInits    <- list( InitsNormalModel(), InitsNormalModel(), InitsNormalModel())  # Going to run 3 chains
 
-    m         <- jags.model( strModelFile, lDataJAGS,lInits, n.chains=3, quiet = TRUE  )
+    m         <- rjags::jags.model( strModelFile, lDataJAGS,lInits, n.chains=3, quiet = TRUE  )
 
 
     update(m,1000,progress.bar = "none",quiet = TRUE)
-    mSamps <- coda.samples(m, c("dMu"  ), n.iter=nQtySamplesPerChain, quiet = TRUE,progress.bar = "none" )
+    mSamps <- rjags::coda.samples(m, c("dMu"  ), n.iter=nQtySamplesPerChain, quiet = TRUE,progress.bar = "none" )
     mSamps          <- rbind(mSamps[,][[1]],mSamps[,][[2]],mSamps[,][[3]])
     dPostMeanMu     <- mean( mSamps[,1])
     #print(paste( "Post Means  ", dPostMeanMu ))

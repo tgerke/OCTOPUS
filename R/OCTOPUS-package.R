@@ -23,4 +23,10 @@
 NULL
 
 # Declare global variables to avoid R CMD check NOTEs
-utils::globalVariables(c("gDebug", "gnPrintDetail", "gPrintEnrollment"))
+utils::globalVariables(c(
+  "gDebug", "gnPrintDetail", "gPrintEnrollment",
+  # ggplot2 variables used in ggSummarizeSimple
+  "Month", "startPatPerMonthMean", "Type", "Lower", "Upper",
+  # Internal function used conditionally
+  "SubsetDataAllControls"
+))

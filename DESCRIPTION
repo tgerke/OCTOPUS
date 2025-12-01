@@ -20,7 +20,9 @@ Suggests: testthat,
           knitr,
           rmarkdown,
           covr,
-          kableExtra
+          kableExtra,
+          rjags,
+          ggplot2
 VignetteBuilder: knitr
 URL: https://github.com/kwathen/OCTOPUS
 License: GPL-3 + file LICENSE

@@ -436,7 +436,9 @@ SummarizeSimple <- function( lResPOC, lResPlat, strFile, xlim = NA, ylim = NA )
 
 ggSummarizeSimple <- function( lResPOC, lResPlat,  xlim = NA, ylim = NA )
 {
-
+    if (!requireNamespace("ggplot2", quietly = TRUE)) {
+        stop("Package 'ggplot2' is required for plotting. Please install it with: install.packages('ggplot2')")
+    }
 
     strAssump <- paste( "Assumptions - POC\n", lResPOC$strAssumpTr1, "\n\n", "Assumptions - Platform\n", lResPlat$strAssumpTr1, sep="")
     strPOC <- paste( "     2 POC Studies \n     Ave. Time to Finish Compound 1 (95% CI): ", round(lResPOC$dMeanFinalMonth1,1),
@@ -482,7 +484,7 @@ ggSummarizeSimple <- function( lResPOC, lResPlat,  xlim = NA, ylim = NA )
         xPoc  <- vMonth[ lResPOC$vLower == max( lResPOC$vLower )]
         xPlat <- vMonth[ lResPlat$vLower ==  max( lResPlat$vLower)]
         xlim  <- max( xPoc[1], xPlat[1] )*1.05
-        xlimScale <- scale_x_continuous( limits=c( 0, round( xlim, 0)))
+        xlimScale <- ggplot2::scale_x_continuous( limits=c( 0, round( xlim, 0)))
 
     }
     else
@@ -496,17 +498,17 @@ ggSummarizeSimple <- function( lResPOC, lResPlat,  xlim = NA, ylim = NA )
                       Lower = c( lResPOC$vLower[vMonth],lResPlat$vLower[vMonth]),
                       Upper = c( lResPOC$vUpper[vMonth],lResPlat$vUpper[vMonth]))
 
-    p1 = ggplot(data = df, aes( x = Month, y = startPatPerMonthMean, colour=Type) ) +
-        geom_line(lwd =2) +
+    p1 = ggplot2::ggplot(data = df, ggplot2::aes( x = Month, y = startPatPerMonthMean, colour=Type) ) +
+        ggplot2::geom_line(lwd =2) +
         xlimScale +
-        labs( title ="Mean Recruitment", y="# of Patients") +
-        theme_bw() +
-        theme(plot.title =element_text(hjust=0.5), panel.grid.major.y = element_line(size=1.5)) +
-        theme( legend.position  ="top", legend.direction="horizontal", legend.title  =element_blank() ) +
-        geom_ribbon( aes( x= Month, ymin=Lower, ymax=Upper, fill=Type), alpha=0.2, colour=NA) +
-        scale_colour_manual( labels=c("2 POC ( 95% CI )","Platform ( 95% CI )"), values=c( "black", "green")) +
+        ggplot2::labs( title ="Mean Recruitment", y="# of Patients") +
+        ggplot2::theme_bw() +
+        ggplot2::theme(plot.title =ggplot2::element_text(hjust=0.5), panel.grid.major.y = ggplot2::element_line(size=1.5)) +
+        ggplot2::theme( legend.position  ="top", legend.direction="horizontal", legend.title  =ggplot2::element_blank() ) +
+        ggplot2::geom_ribbon( ggplot2::aes( x= Month, ymin=Lower, ymax=Upper, fill=Type), alpha=0.2, colour=NA) +
+        ggplot2::scale_colour_manual( labels=c("2 POC ( 95% CI )","Platform ( 95% CI )"), values=c( "black", "green")) +
 
-        scale_fill_manual(labels=c("2 POC ( 95% CI )","Platform ( 95% CI )"),values=c("gray", "green"))
+        ggplot2::scale_fill_manual(labels=c("2 POC ( 95% CI )","Platform ( 95% CI )"),values=c("gray", "green"))
 
 
 
